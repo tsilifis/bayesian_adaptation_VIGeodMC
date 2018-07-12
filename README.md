@@ -5,4 +5,4 @@ P. Tsilifis and R. Ghanem, **Bayesian adaptation of chaos representations using 
 
 
 ### Requirements:
-The Polynomial Chaos library chaos_basispy (https://pypi.org/project/chaos-basispy/) that is available in my GitHub page is necessary for utilizing both the Variational Inference (VI) and Geodesic Monte Carlo algorithms. 
+The Polynomial Chaos library chaos_basispy (https://pypi.org/project/chaos-basispy/) that is available in my GitHub profile is necessary for utilizing both the Variational Inference (VI) and Geodesic Monte Carlo algorithms. 
