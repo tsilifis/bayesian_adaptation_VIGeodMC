@@ -34,6 +34,35 @@ class ChaosModel(object):
 	def eval(self, xi):
 		return np.dot(self._basis(xi), self._coeffs)
 
+class SparseChaosModel(object):
+
+	_dim = None
+
+	_order = None
+
+	_basis = None
+
+	_coeffs = None
+
+	_sparse_z = None
+
+	def __init__(self, dim, order, coeffs, z):
+		"""
+		Initializes the object
+		"""
+		assert isinstance(dim, int)
+		assert isinstance(order, int)
+		self._dim = dim
+		self._order = order 
+		self._basis = cb.PolyBasis(self._dim, self._order, 'H')
+		assert self._basis._MI_terms.shape[0] == coeffs.shape[0]
+		assert self._basis._MI_terms.shape[0] == z
+		self._coeffs = coeffs
+		self._sparse_z = z
+
+	def eval(self, xi):
+		C = self._coeffs * self._sparse_z
+		return np.dot(self._basis(xi), C)
 
 
 class Likelihood(object):
