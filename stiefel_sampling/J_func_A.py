@@ -2,7 +2,6 @@ __all__ = ['eval_hermite', 'J', 'J_short']
 
 import numpy as np
 import scipy.stats as st 
-#import orthpol
 import chaos_basispy as cb
 from scipy.optimize import minimize
 

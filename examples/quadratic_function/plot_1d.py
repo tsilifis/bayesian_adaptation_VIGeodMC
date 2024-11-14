@@ -7,8 +7,8 @@ import scipy.stats as st
 plt.style.use('ggplot')
 
 
-c = np.load('results/c_sol_1d_iter_6.npy')[:,0]
-iso = np.load('results/W_1d_iter_6.npy')
+c = np.load('results/1d/c_sol_1d_iter_4.npy')[:,0]
+iso = np.load('results/1d/W_1d_iter_4.npy')
 #print np.load('2d_results/W_1d_iter_20.npy')
 
 print iso

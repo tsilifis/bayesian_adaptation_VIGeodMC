@@ -17,7 +17,7 @@ np.random.seed(1234)
 d = 10
 deg = 2
 datapath = 'data'
-outpath = 'results'
+outpath = 'results/1d'
 # ---- Setting the example: Coeffs, data and chaos model ------
 #c = np.array([0.25*12., np.sqrt(12.) + 0.075*(12.**(3./2.)), 0.25*12.*np.sqrt(2.), 0.025*(12.**(3./2)) * np.sqrt(6.)])
 
@@ -87,8 +87,8 @@ while i < iters and c_eta_tol > 1e-3:
 	#np.save(outpath+'/w_sol_iter_'+str(i+1)+'.npy', chain[-1])
 	V0.update_Psi()
 
-	np.save(outpath+'/c_sol_1d_data_iter_'+str(i+1)+'.npy', c_sol)
-	np.save(outpath+'/W_1d_data_iter_'+str(i+1)+'.npy', V0._W)
+	np.save(outpath+'/c_sol_1d_iter_'+str(i+1)+'.npy', c_sol)
+	np.save(outpath+'/W_1d_iter_'+str(i+1)+'.npy', V0._W)
 
 	i = i + 1
 
