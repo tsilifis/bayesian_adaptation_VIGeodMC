@@ -4,7 +4,6 @@ import numpy as np
 import scipy.stats as st 
 import scipy.linalg as lng
 import chaos_basispy as cb
-import orthpol
 from J_func_A import *
 
 
