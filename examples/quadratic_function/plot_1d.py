@@ -1,3 +1,10 @@
+""" 
+
+Author: Panos Tsilifis (tsilifis@protonmail.com)
+Date: November 14, 2024
+
+"""
+
 import numpy as np 
 import matplotlib.pyplot as plt 
 
