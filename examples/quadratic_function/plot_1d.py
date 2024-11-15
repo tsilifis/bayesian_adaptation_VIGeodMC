@@ -7,16 +7,16 @@ import scipy.stats as st
 plt.style.use('ggplot')
 
 
-c = np.load('results/1d/c_sol_1d_iter_4.npy')[:,0]
-iso = np.load('results/1d/W_1d_iter_4.npy')
+c = np.load('results/2d/c_sol_2d_1st_iter_4.npy')[:,0]
+iso = np.load('results/2d/iso_1st_ord2_2d.npy')[:, -1]
 #print np.load('2d_results/W_1d_iter_20.npy')
 
 print iso
 
 pol = cb.PolyBasis(1, 2)
-XI = np.load('data/XI_1d.npy')[:150,:]
-q = np.load('data/y_1d.npy')[:150]
-W = np.load('data/W_1d_true.npy')
+XI = np.load('data/XI_2d.npy')[:150,:]
+q = np.load('data/y_2d.npy')[:150]
+W = np.load('data/W_2d_true.npy')[:, 1]
 
 #error = [-W.flatten() - np.min(iso[:,6:], axis = 1), np.max(iso[:,6:], axis = 1) + W.flatten()]
 #print error[0]

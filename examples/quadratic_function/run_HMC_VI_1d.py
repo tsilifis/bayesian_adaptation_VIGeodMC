@@ -17,12 +17,12 @@ np.random.seed(1234)
 d = 10
 deg = 2
 datapath = 'data'
-outpath = 'results/1d'
+outpath = 'results/2d'
 # ---- Setting the example: Coeffs, data and chaos model ------
 #c = np.array([0.25*12., np.sqrt(12.) + 0.075*(12.**(3./2.)), 0.25*12.*np.sqrt(2.), 0.025*(12.**(3./2)) * np.sqrt(6.)])
 
-XI = np.load(datapath+'/XI_1d.npy')[:150,:]
-y = np.load(datapath+'/y_1d.npy')[:150]
+XI = np.load(datapath+'/XI_2d.npy')[:150,:]
+y = np.load(datapath+'/y_2d.npy')[:150]
 
 data = {'y': y, 'xi': XI}
 params = {'d': 1, 'deg': deg, 'coeffs': np.zeros(deg+1)}
@@ -87,8 +87,8 @@ while i < iters and c_eta_tol > 1e-3:
 	#np.save(outpath+'/w_sol_iter_'+str(i+1)+'.npy', chain[-1])
 	V0.update_Psi()
 
-	np.save(outpath+'/c_sol_1d_iter_'+str(i+1)+'.npy', c_sol)
-	np.save(outpath+'/W_1d_iter_'+str(i+1)+'.npy', V0._W)
+	np.save(outpath+'/c_sol_2d_1st_iter_'+str(i+1)+'.npy', c_sol)
+	np.save(outpath+'/W_2d_1st_iter_'+str(i+1)+'.npy', V0._W)
 
 	i = i + 1
 
@@ -104,9 +104,9 @@ if i < iters:
 	print 'Run an additional chain for W'
 
 
-#np.save(path+'/2d_results/c_2nd_ord2_1d.npy', c_chain)
-#np.save(path+'/2d_results/iso_2nd_ord2_1d.npy', w_chain)
-#np.save(path+'/2d_results/tau_2nd_ord2_1d.npy', tau_chain)
+np.save(outpath+'/c_1st_ord2_2d.npy', c_chain)
+np.save(outpath+'/iso_1st_ord2_2d.npy', w_chain)
+np.save(outpath+'/tau_1st_ord2_2d.npy', tau_chain)
 
 
 
